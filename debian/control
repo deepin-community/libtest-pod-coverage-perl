@@ -1,0 +1,31 @@
+Source: libtest-pod-coverage-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Allard Hoeve <allard@byte.nl>,
+           Niko Tyni <ntyni@iki.fi>,
+           Krzysztof Krzyzaniak (eloy) <eloy@debian.org>,
+           gregor herrmann <gregoa@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper (>= 9~)
+Build-Depends-Indep: libpod-coverage-perl,
+                     libtest-pod-perl,
+                     perl
+Standards-Version: 3.9.6
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-perl/packages/libtest-pod-coverage-perl.git
+Vcs-Git: git://anonscm.debian.org/pkg-perl/packages/libtest-pod-coverage-perl.git
+Homepage: https://metacpan.org/release/Test-Pod-Coverage
+
+Package: libtest-pod-coverage-perl
+Architecture: all
+Depends: ${perl:Depends},
+         ${misc:Depends},
+         libpod-coverage-perl
+Recommends: libtest-pod-perl
+Description: module to check for pod coverage in a distribution
+ Test::Pod::Coverage is a wrapper for Pod::Coverage that
+ automates the process of testing one's documentation for
+ completeness. It is mostly used as a final check before
+ distributing a new release.
+ .
+ Also see libpod-coverage-perl.
